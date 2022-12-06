@@ -1,6 +1,6 @@
 name: Second Workflow
 on: 
-  workflow_dispatch::
+  workflow_dispatch:
       inputs:
           name:
             description: 'name of the person'
