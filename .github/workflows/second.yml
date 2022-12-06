@@ -1,10 +1,10 @@
 name: Second Workflow
-on: workflow_dispatch
-      inputs:
-          name:
-            description: 'name of the person'
-            required: 'true'
-            default: 'Alex'
+on: 
+  workflow_dispatch:
+    inputs:
+      description: 'name of the person'
+      required: 'true'
+      default: 'Alex'
 jobs:
   first-job:
       runs-on: ubuntu-latest
