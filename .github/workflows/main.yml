@@ -1,10 +1,12 @@
-on:
- workflow_dispatch:
- inputs:
- username:
- description: 'Your GitHub username'
- required: true
- reason:
- description: 'Why are you running this workflow manually?'
- required: true
- default: 'I am running tests before implementing an automated workflow'
+name: First Workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Print greeting
+          run: |
+                echo "Hello World"
+                echo "This world is very competitve"
+        - name: Print Goodbye
+          run: echo "Bye ,have a great life ahead"
