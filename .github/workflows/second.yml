@@ -1,17 +1,16 @@
-name: Second Workflow
 on: 
   workflow_dispatch:
     inputs:
-      description: 'name of the person'
-      required: 'true'
-      default: 'Alex'
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'  
 jobs:
-  first-job:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Print greeting
-          run: |
-                echo "Hello World ${{ github.event.inputs.name }}! "
-                echo "This world is very competitve"
-        - name: Print Goodbye
-          run: echo "Bye ,have a great life ahead"
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
+        echo "Tags: ${{ github.event.inputs.tags }}" 
