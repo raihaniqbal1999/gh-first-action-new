@@ -3,8 +3,7 @@ on: workflow_dispatch
 env:
    username: "Alex"
    role: "Devops Engineer"
-   
- jobs:
+jobs:
     variable-job:
         runs-on: ubuntu-latest
         steps:
