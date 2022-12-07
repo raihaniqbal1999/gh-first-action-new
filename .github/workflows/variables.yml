@@ -1,0 +1,15 @@
+name: VariableDemo
+on: workflow_dispatch
+env:
+   username: "Alex"
+   role: "Devops Engineer"
+   
+ jobs:
+    variable-job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Demonstrating variables
+            run: |
+                  echo Hello $username !!!
+                  echo I am working as a $role
+          
